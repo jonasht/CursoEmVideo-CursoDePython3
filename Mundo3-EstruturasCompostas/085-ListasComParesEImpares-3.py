@@ -1,3 +1,6 @@
+import colorama
+colorama.init() # p/ funcionar no windows, linux funciona normalmente
+
 r = '\033[31m' # red
 b = '\033[34m' # blue
 g = '\033[32m' # green
