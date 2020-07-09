@@ -5,7 +5,7 @@ def l():print('\n'+'=-'*30 + '=')
 print('escreva s para sair')
 limpar()
 l()
-for i range(0, 7):
+for i in range(0, 7):
     l()
     entrada = input(f'[{i+1}] num:')
     limpar()
