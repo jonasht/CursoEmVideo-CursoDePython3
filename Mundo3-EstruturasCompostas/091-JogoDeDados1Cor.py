@@ -6,17 +6,19 @@ from random import randint
 from time import sleep
 from operator import itemgetter
 import colorama
+colorama.init() # p/ funcionar no windows, linux funciona normalmente
+
 
 r = '\033[31m' # red
 b = '\033[34m' # blue
 g = '\033[32m' # green
 f = '\33[m'
-cores = (r, b, g, '')
 
+cores = (r, b, g, '')
 
 jogadores = dict()
 ranking = list()
-
+print('\n'+20*'=-'+'=')
 for i in range(4):
     nome = f'jogador{i + 1}'
     jogadores[nome] = randint(1, 6)
@@ -27,7 +29,7 @@ for i in range(4):
 ranking = sorted(jogadores.items(), key=itemgetter(1), reverse=True)
 
 print(20*'=-'+'=')
-print('=-=-= ranking players =-=-=')
+print('=-=-=-= ranking players =-=-=-=')
 for i, jogador in enumerate(ranking):
-    print(f'{cores[i]}{i+1}º lugar: {jogador[0]} com {jogador[1]}')
+    print(f'{cores[i]}{i+1}º lugar: {jogador[0]} com {jogador[1]}{f}')
 print(20*'=-'+'=')    
