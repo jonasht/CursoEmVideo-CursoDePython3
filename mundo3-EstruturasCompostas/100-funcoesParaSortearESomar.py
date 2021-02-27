@@ -7,6 +7,9 @@
 # todos os valores pares sorteados pela função anterior.
 
 from random import randint
+from os import system
+from time import sleep
+
 
 def sortear(numeros):
     numeros = [randint(1, 10) for i in range(6)]
@@ -19,9 +22,13 @@ def somarPar(numeros):
             numeroParSomar+= par
     return numeroParSomar
 
+def l (): print(f'=-'*30 + '=')
+
 lista = list()
 lista = sortear(lista)
 print(f'os numeros sorteados são:')
+l()
 [print(f'{l} ', end='') for l in lista]
 
 print(f'\nsoma dos pares {somarPar(lista)}')
+l()
