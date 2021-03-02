@@ -5,7 +5,7 @@
 # O programa deverá ser capaz de mostrar a ficha do jogador,
 # mesmo que algum dado não tenha sido informado corretamente.
 
-def ficha(jogador, gols=0):
+def ficha(jogador='', gols=0):
     
     if jogador:
         resultado  = f'o jogador {jogador.title()} '
